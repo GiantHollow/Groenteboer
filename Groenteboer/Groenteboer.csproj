@@ -58,6 +58,7 @@
     <Compile Include="Fruit.Designer.cs">
       <DependentUpon>Fruit.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBConnect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucProductDisplay.cs">
@@ -72,6 +73,9 @@
     <Compile Include="Winkelmandje.Designer.cs">
       <DependentUpon>Winkelmandje.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fruit.resx">
+      <DependentUpon>Fruit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Groente.resx">
       <DependentUpon>Groente.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="ucProductDisplay.resx">
       <DependentUpon>ucProductDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winkelmandje.resx">
+      <DependentUpon>Winkelmandje.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
