@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Groente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Groente.Designer.cs">
+      <DependentUpon>Groente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fruit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fruit.Designer.cs">
+      <DependentUpon>Fruit.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,8 +66,14 @@
     <Compile Include="ucProductDisplay.Designer.cs">
       <DependentUpon>ucProductDisplay.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Winkelmandje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winkelmandje.Designer.cs">
+      <DependentUpon>Winkelmandje.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Groente.resx">
+      <DependentUpon>Groente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
