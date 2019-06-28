@@ -34,8 +34,11 @@ namespace Groenteboer
             DBConnect myDBConnect = new DBConnect();
 
             string QueryString = "select * from producten where isGroente";
+        }
 
-            while 
+        private void btnNaarFruit_Click(object sender, EventArgs e)
+        {
+            Fruit.Show();
         }
     }
 }
