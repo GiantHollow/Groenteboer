@@ -32,7 +32,7 @@ namespace Groenteboer
             password = "";
 
             string connectionString;
-            connectionString = "SERVER=" + server + ";" +
+            connectionString =  "SERVER=" + server + ";" +
                                 "DATABASE=" + database + ";" +
                                 "UID=" + uid + ";" +
                                 "PASSWORD=" + password + ";";
