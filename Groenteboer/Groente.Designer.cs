@@ -80,6 +80,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "frmGroenten";
             this.Text = "Groenten";
+            this.Load += new System.EventHandler(this.frmGroenten_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
