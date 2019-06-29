@@ -34,8 +34,14 @@ namespace Groenteboer
             DBConnect myDBConnect = new DBConnect();
 
             string QueryString = "select * from producten where isGroente";
+            MySqlCommand cmdObject = new MySqlCommand(QueryString);
+            MySqlDataReader data = cmdObject.ExecuteReader();
 
-            while 
+            while (data.Read())
+            {
+                ucProductDisplay container = new ucProductDisplay();
+
+            }
         }
     }
 }
