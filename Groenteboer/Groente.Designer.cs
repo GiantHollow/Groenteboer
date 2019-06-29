@@ -37,47 +37,53 @@
             // 
             // ucProductDisplay1
             // 
-            this.ucProductDisplay1.Location = new System.Drawing.Point(3, 3);
+            this.ucProductDisplay1.Location = new System.Drawing.Point(5, 5);
+            this.ucProductDisplay1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucProductDisplay1.Name = "ucProductDisplay1";
-            this.ucProductDisplay1.Size = new System.Drawing.Size(123, 209);
+            this.ucProductDisplay1.Size = new System.Drawing.Size(164, 257);
             this.ucProductDisplay1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.ucProductDisplay1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(660, 364);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(880, 448);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnNaarFruit
             // 
             this.btnNaarFruit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNaarFruit.Location = new System.Drawing.Point(12, 407);
+            this.btnNaarFruit.Location = new System.Drawing.Point(16, 501);
+            this.btnNaarFruit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNaarFruit.Name = "btnNaarFruit";
-            this.btnNaarFruit.Size = new System.Drawing.Size(185, 31);
+            this.btnNaarFruit.Size = new System.Drawing.Size(247, 38);
             this.btnNaarFruit.TabIndex = 2;
             this.btnNaarFruit.Text = "Naar fruit";
             this.btnNaarFruit.UseVisualStyleBackColor = true;
+            this.btnNaarFruit.Click += new System.EventHandler(this.btnNaarFruit_Click);
             // 
             // btnNaarWinkelmandje
             // 
             this.btnNaarWinkelmandje.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNaarWinkelmandje.Location = new System.Drawing.Point(467, 407);
+            this.btnNaarWinkelmandje.Location = new System.Drawing.Point(623, 501);
+            this.btnNaarWinkelmandje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNaarWinkelmandje.Name = "btnNaarWinkelmandje";
-            this.btnNaarWinkelmandje.Size = new System.Drawing.Size(185, 31);
+            this.btnNaarWinkelmandje.Size = new System.Drawing.Size(247, 38);
             this.btnNaarWinkelmandje.TabIndex = 3;
             this.btnNaarWinkelmandje.Text = "Naar winkelmandje";
             this.btnNaarWinkelmandje.UseVisualStyleBackColor = true;
             // 
             // frmGroenten
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.ClientSize = new System.Drawing.Size(885, 554);
             this.Controls.Add(this.btnNaarWinkelmandje);
             this.Controls.Add(this.btnNaarFruit);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmGroenten";
             this.Text = "Groenten";
             this.Load += new System.EventHandler(this.frmGroenten_Load);
