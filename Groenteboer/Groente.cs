@@ -14,19 +14,11 @@ namespace Groenteboer
 {
     public partial class frmGroenten : Form
     {
-        private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-
         public frmGroenten()
         {
             InitializeComponent();
         }
-
         
-
         //When Groenten laad, laadt je ook de objecten in
         private void frmGroenten_Load(object sender, EventArgs e)
         {
@@ -41,13 +33,22 @@ namespace Groenteboer
             while (data.Read())
             {
                 ucProductDisplay container = new ucProductDisplay();
+                string productNaam = data["naam"].ToString();
+                string price = data["prijs"].ToString();
+                string picture = data["plaatje"].ToString();
 
+                container.setData(productNaam, price, picture);
+                container.Show();
+
+                ProductPanel.Controls.Add(container);
             }
         }
 
         private void btnNaarFruit_Click(object sender, EventArgs e)
         {
-            Fruit.Show();
+            Hide();
+            Fruit newForm = new Fruit();
+            newForm.Show();
         }
     }
 }

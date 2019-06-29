@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbProduct = new System.Windows.Forms.PictureBox();
             this.lblProductNaam = new System.Windows.Forms.Label();
             this.lblPrijs = new System.Windows.Forms.Label();
             this.btnWinkelmand = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbProduct
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 116);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbProduct.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pbProduct.Location = new System.Drawing.Point(4, 4);
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.Size = new System.Drawing.Size(115, 116);
+            this.pbProduct.TabIndex = 0;
+            this.pbProduct.TabStop = false;
             // 
             // lblProductNaam
             // 
@@ -74,6 +74,7 @@
             this.btnWinkelmand.TabIndex = 3;
             this.btnWinkelmand.Text = "Toevoegen aan winkelmand";
             this.btnWinkelmand.UseVisualStyleBackColor = true;
+            this.btnWinkelmand.Click += new System.EventHandler(this.btnWinkelmand_Click);
             // 
             // label1
             // 
@@ -93,10 +94,10 @@
             this.Controls.Add(this.btnWinkelmand);
             this.Controls.Add(this.lblPrijs);
             this.Controls.Add(this.lblProductNaam);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbProduct);
             this.Name = "ucProductDisplay";
             this.Size = new System.Drawing.Size(123, 209);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,7 +105,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbProduct;
         private System.Windows.Forms.Label lblProductNaam;
         private System.Windows.Forms.Label lblPrijs;
         private System.Windows.Forms.Button btnWinkelmand;

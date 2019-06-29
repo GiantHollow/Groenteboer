@@ -30,6 +30,7 @@
         {
             this.btnNaarGroente = new System.Windows.Forms.Button();
             this.btnNaarWinkelmandje = new System.Windows.Forms.Button();
+            this.ProductPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnNaarGroente
@@ -41,6 +42,7 @@
             this.btnNaarGroente.TabIndex = 0;
             this.btnNaarGroente.Text = "Naar groente";
             this.btnNaarGroente.UseVisualStyleBackColor = true;
+            this.btnNaarGroente.Click += new System.EventHandler(this.btnNaarGroente_Click);
             // 
             // btnNaarWinkelmandje
             // 
@@ -52,15 +54,24 @@
             this.btnNaarWinkelmandje.Text = "Naar winkelmandje";
             this.btnNaarWinkelmandje.UseVisualStyleBackColor = true;
             // 
+            // ProductPanel
+            // 
+            this.ProductPanel.Location = new System.Drawing.Point(1, 2);
+            this.ProductPanel.Name = "ProductPanel";
+            this.ProductPanel.Size = new System.Drawing.Size(801, 397);
+            this.ProductPanel.TabIndex = 2;
+            // 
             // Fruit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ProductPanel);
             this.Controls.Add(this.btnNaarWinkelmandje);
             this.Controls.Add(this.btnNaarGroente);
             this.Name = "Fruit";
             this.Text = "Fruit";
+            this.Load += new System.EventHandler(this.Fruit_Load);
             this.ResumeLayout(false);
 
         }
@@ -69,5 +80,6 @@
 
         private System.Windows.Forms.Button btnNaarGroente;
         private System.Windows.Forms.Button btnNaarWinkelmandje;
+        private System.Windows.Forms.FlowLayoutPanel ProductPanel;
     }
 }
