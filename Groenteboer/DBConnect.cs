@@ -24,7 +24,7 @@ namespace Groenteboer
         }
 
         //Initialize values
-        private void Initialize()
+        public void Initialize()
         {
             server = "localhost";
             database = "groenteboer";
@@ -41,7 +41,7 @@ namespace Groenteboer
         }
 
         //open connection to database
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -70,7 +70,7 @@ namespace Groenteboer
         }
 
         //Close connection
-        private bool CloseConnection()
+        public bool CloseConnection()
         {
             try
             {
@@ -85,9 +85,9 @@ namespace Groenteboer
         }
 
         // Insert statement
-        public void Insert(string naam, int prijs)
+        public void Insert(string naam, string prijs)
         {
-            string query = "INSERT INTO producten (naam, prijs) VALUES('" + naam + "', '" + prijs + "')";
+            string query = "INSERT INTO producten_has_winkelmandje (naam, prijs) VALUES('" + naam + "', '" + prijs + "')";
 
             // Open connection
             if (this.OpenConnection() == true)

@@ -24,6 +24,8 @@ namespace Groenteboer
         {
             // Maak data object
             DBConnect myDBConnect = new DBConnect();
+            myDBConnect.Initialize();
+            myDBConnect.OpenConnection();
 
             string QueryString = "select * from producten where isGroente";
 
@@ -42,6 +44,8 @@ namespace Groenteboer
 
                 ProductPanel.Controls.Add(container);
             }
+
+            myDBConnect.CloseConnection();
         }
 
         private void btnNaarFruit_Click(object sender, EventArgs e)
