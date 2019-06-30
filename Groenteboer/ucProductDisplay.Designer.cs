@@ -39,9 +39,11 @@
             // pbProduct
             // 
             this.pbProduct.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pbProduct.InitialImage = null;
             this.pbProduct.Location = new System.Drawing.Point(4, 4);
             this.pbProduct.Name = "pbProduct";
             this.pbProduct.Size = new System.Drawing.Size(115, 116);
+            this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProduct.TabIndex = 0;
             this.pbProduct.TabStop = false;
             // 

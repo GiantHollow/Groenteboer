@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -17,9 +18,9 @@ namespace Groenteboer
             InitializeComponent();
         }
 
-        public void setData(string productNaam, string prijs, string plaatje)
+        public void setData(string productNaam, string prijs, MemoryStream plaatje)
         {
-            pbProduct.Image = System.Drawing.Image.FromFile(plaatje);
+            pbProduct.Image = new Bitmap(plaatje);
             lblProductNaam.Text = productNaam;
             lblPrijs.Text = prijs;
         }
@@ -28,7 +29,7 @@ namespace Groenteboer
         {
             DBConnect myDBconnect = new DBConnect();
             myDBconnect.OpenConnection();
-            myDBconnect.Insert(lblProductNaam.Text, lblPrijs.Text);
+            myDBconnect.Insert(lblProductNaam.Text, lblPrijs.Text, plaatje);
         }
     }
 }

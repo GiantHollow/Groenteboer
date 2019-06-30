@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucProductDisplay1 = new Groenteboer.ucProductDisplay();
             this.ProductPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnNaarFruit = new System.Windows.Forms.Button();
             this.btnNaarWinkelmandje = new System.Windows.Forms.Button();
-            this.ProductPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ucProductDisplay1
-            // 
-            this.ucProductDisplay1.Location = new System.Drawing.Point(4, 4);
-            this.ucProductDisplay1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ucProductDisplay1.Name = "ucProductDisplay1";
-            this.ucProductDisplay1.Size = new System.Drawing.Size(123, 209);
-            this.ucProductDisplay1.TabIndex = 0;
             // 
             // ProductPanel
             // 
-            this.ProductPanel.Controls.Add(this.ucProductDisplay1);
             this.ProductPanel.Location = new System.Drawing.Point(2, 2);
             this.ProductPanel.Name = "ProductPanel";
             this.ProductPanel.Size = new System.Drawing.Size(660, 364);
@@ -83,14 +72,11 @@
             this.Name = "frmGroenten";
             this.Text = "Groenten";
             this.Load += new System.EventHandler(this.frmGroenten_Load);
-            this.ProductPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ucProductDisplay ucProductDisplay1;
         private System.Windows.Forms.FlowLayoutPanel ProductPanel;
         private System.Windows.Forms.Button btnNaarFruit;
         private System.Windows.Forms.Button btnNaarWinkelmandje;

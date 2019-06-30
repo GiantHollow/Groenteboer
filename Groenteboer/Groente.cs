@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,12 +25,11 @@ namespace Groenteboer
         {
             // Maak data object
             DBConnect myDBConnect = new DBConnect();
-            myDBConnect.Initialize();
             myDBConnect.OpenConnection();
 
             string QueryString = "select * from producten where isGroente";
 
-            MySqlCommand cmdObject = new MySqlCommand(QueryString);
+            MySqlCommand cmdObject = new MySqlCommand(QueryString, myDBConnect.connection);
             MySqlDataReader data = cmdObject.ExecuteReader();
 
             while (data.Read())
@@ -37,9 +37,10 @@ namespace Groenteboer
                 ucProductDisplay container = new ucProductDisplay();
                 string productNaam = data["naam"].ToString();
                 string price = data["prijs"].ToString();
-                string picture = data["plaatje"].ToString();
+                //Image picture = data["plaatje"];
+                MemoryStream ms = new MemoryStream((byte[])data["plaatje"]);
 
-                container.setData(productNaam, price, picture);
+                container.setData(productNaam, price, ms);
                 container.Show();
 
                 ProductPanel.Controls.Add(container);
