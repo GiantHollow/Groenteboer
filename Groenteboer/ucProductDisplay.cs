@@ -28,8 +28,7 @@ namespace Groenteboer
         public void btnWinkelmand_Click(object sender, EventArgs e)
         {
             DBConnect myDBconnect = new DBConnect();
-            myDBconnect.OpenConnection();
-            myDBconnect.Insert(lblProductNaam.Text, lblPrijs.Text, plaatje);
+            //myDBconnect.Insert(lblProductNaam.Text, lblPrijs.Text);
         }
     }
 }

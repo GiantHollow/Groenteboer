@@ -71,6 +71,12 @@
     <Compile Include="ucProductDisplay.Designer.cs">
       <DependentUpon>ucProductDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucWinkelmandjeDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucWinkelmandjeDisplay.Designer.cs">
+      <DependentUpon>ucWinkelmandjeDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Winkelmandje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="ucProductDisplay.resx">
       <DependentUpon>ucProductDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucWinkelmandjeDisplay.resx">
+      <DependentUpon>ucWinkelmandjeDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Winkelmandje.resx">
       <DependentUpon>Winkelmandje.cs</DependentUpon>

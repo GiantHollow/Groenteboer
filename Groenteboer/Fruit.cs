@@ -15,17 +15,17 @@ namespace Groenteboer
 {
     public partial class Fruit : Form
     {
+        DBConnect myDBConnect;
+
         public Fruit()
         {
             InitializeComponent();
+            myDBConnect = new DBConnect();
+            myDBConnect.OpenConnection();
         }
 
         private void Fruit_Load(object sender, EventArgs e)
         {
-            // Maak data object
-            DBConnect myDBConnect = new DBConnect();
-            myDBConnect.OpenConnection();
-
             string QueryString = "select * from producten where not isGroente";
 
             MySqlCommand cmdObject = new MySqlCommand(QueryString, myDBConnect.connection);
@@ -36,7 +36,6 @@ namespace Groenteboer
                 ucProductDisplay container = new ucProductDisplay();
                 string productNaam = data["naam"].ToString();
                 string price = data["prijs"].ToString();
-                //Image picture = data["plaatje"];
                 MemoryStream ms = new MemoryStream((byte[])data["plaatje"]);
 
                 container.setData(productNaam, price, ms);
@@ -44,15 +43,14 @@ namespace Groenteboer
 
                 ProductPanel.Controls.Add(container);
             }
-
-            myDBConnect.CloseConnection();
         }
 
         private void btnNaarGroente_Click(object sender, EventArgs e)
         {
-            Hide();
+            myDBConnect.CloseConnection();
             frmGroenten newForm = new frmGroenten();
             newForm.Show();
+            this.Hide();
         }
     }
 }

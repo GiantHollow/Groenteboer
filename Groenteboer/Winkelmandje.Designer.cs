@@ -63,6 +63,7 @@
             this.btnNaarFruit.TabIndex = 2;
             this.btnNaarFruit.Text = "Naar fruit";
             this.btnNaarFruit.UseVisualStyleBackColor = true;
+            this.btnNaarFruit.Click += new System.EventHandler(this.btnNaarFruit_Click);
             // 
             // btnNaarGroente
             // 
@@ -73,6 +74,7 @@
             this.btnNaarGroente.TabIndex = 3;
             this.btnNaarGroente.Text = "Naar groente";
             this.btnNaarGroente.UseVisualStyleBackColor = true;
+            this.btnNaarGroente.Click += new System.EventHandler(this.btnNaarGroente_Click);
             // 
             // Winkelmandje
             // 
@@ -85,6 +87,7 @@
             this.Controls.Add(this.btnAfrekenen);
             this.Name = "Winkelmandje";
             this.Text = "Winkelmandje";
+            this.Load += new System.EventHandler(this.Winkelmandje_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,7 +16,7 @@ namespace Groenteboer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGroenten());
+            Application.Run(new Winkelmandje());
         }
     }
 }
