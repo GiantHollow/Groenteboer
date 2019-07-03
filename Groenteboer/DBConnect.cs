@@ -85,9 +85,9 @@ namespace Groenteboer
         }
 
         // Insert statement
-        public void Insert(string naam, string prijs)
+        public void Insert(string id)
         {
-            string query = "INSERT INTO producten_has_winkelmandje (naam, prijs) VALUES('" + naam + "', '" + prijs + "')";
+            string query = "INSERT INTO producten_has_winkelmandje (id) VALUES('" + id + "')";
 
             // Open connection
             if (this.OpenConnection() == true)
