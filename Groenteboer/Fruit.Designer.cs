@@ -53,6 +53,7 @@
             this.btnNaarWinkelmandje.TabIndex = 1;
             this.btnNaarWinkelmandje.Text = "Naar winkelmandje";
             this.btnNaarWinkelmandje.UseVisualStyleBackColor = true;
+            this.btnNaarWinkelmandje.Click += new System.EventHandler(this.btnNaarWinkelmandje_Click);
             // 
             // ProductPanel
             // 

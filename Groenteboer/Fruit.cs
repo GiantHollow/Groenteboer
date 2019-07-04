@@ -50,7 +50,15 @@ namespace Groenteboer
             myDBConnect.CloseConnection();
             frmGroenten newForm = new frmGroenten();
             newForm.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnNaarWinkelmandje_Click(object sender, EventArgs e)
+        {
+            myDBConnect.CloseConnection();
+            Winkelmandje newForm = new Winkelmandje();
+            newForm.Show();
+            this.Close();
         }
     }
 }

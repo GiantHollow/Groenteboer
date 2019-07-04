@@ -60,6 +60,7 @@
             this.btnNaarWinkelmandje.TabIndex = 3;
             this.btnNaarWinkelmandje.Text = "Naar winkelmandje";
             this.btnNaarWinkelmandje.UseVisualStyleBackColor = true;
+            this.btnNaarWinkelmandje.Click += new System.EventHandler(this.btnNaarWinkelmandje_Click);
             // 
             // frmGroenten
             // 

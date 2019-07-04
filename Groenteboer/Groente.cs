@@ -48,8 +48,16 @@ namespace Groenteboer
 
         private void btnNaarFruit_Click(object sender, EventArgs e)
         {
-           myDBConnect.CloseConnection();
+            myDBConnect.CloseConnection();
             Fruit newForm = new Fruit();
+            newForm.Show();
+            this.Close();
+        }
+
+        private void btnNaarWinkelmandje_Click(object sender, EventArgs e)
+        {
+            myDBConnect.CloseConnection();
+            Winkelmandje newForm = new Winkelmandje();
             newForm.Show();
             this.Close();
         }
